@@ -1,6 +1,7 @@
 // @ts-check
 //  <ImportConfiguration>
 const CosmosClient = require("@azure/cosmos").CosmosClient;
+const { Item, Items } = require("@azure/cosmos");
 const config = require("./config");
 const dbContext = require("./data/databaseContext");
 //  </ImportConfiguration>
@@ -14,7 +15,7 @@ const newItem = {
 };
 //  </DefineNewItem>
 
-async function main() {
+const GetDB = async () => {
   
   // <CreateClientObjectDatabaseContainer>
   const { endpoint, key, databaseId, containerId } = config;
@@ -86,6 +87,8 @@ async function main() {
   } catch (err) {
     console.log(err.message);
   }
+
+  return Items;
 }
 
-main();
+GetDB();

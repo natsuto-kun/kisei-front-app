@@ -5,10 +5,12 @@ const sampleText = css`
   font-size: 22px;
 `;
 
-export const TrueEnd = () => {
+const TrueEnd = () => {
     return (
         <div>
             <p className="sampleText">True End</p>
         </div>
     )
 }
+
+export default TrueEnd;

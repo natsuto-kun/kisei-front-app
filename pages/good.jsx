@@ -1,11 +1,11 @@
 import react from "react";
 
-const BadEnd = () => {
+const GoodEnd = () => {
     return (
         <div>
-            <p>Bad End</p>
+            <p>Good End</p>
         </div>
     )
 }
 
-export default BadEnd;
+export default GoodEnd;
