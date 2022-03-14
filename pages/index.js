@@ -19,9 +19,9 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-        <Link href="/true"><a>TrueEnd</a></Link>
+        <Link href="/True"><a>TrueEnd</a></Link>
         <Link href="/good"><a>GoodEnd</a></Link>
-        <Link href="/bad"><a>BadEnd</a></Link>
+        <Link href="/Bad"><a>BadEnd</a></Link>
 
         <p className={styles.description}>
           Get started by editing{' '}
