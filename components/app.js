@@ -2,7 +2,6 @@
 //  <ImportConfiguration>
 const CosmosClient = require("@azure/cosmos").CosmosClient;
 const { Item, Items } = require("@azure/cosmos");
-const config = require("./config");
 const dbContext = require("./data/databaseContext");
 //  </ImportConfiguration>
 
@@ -18,15 +17,14 @@ const newItem = {
 const GetDB = async () => {
   
   // <CreateClientObjectDatabaseContainer>
-  const { endpoint, key, databaseId, containerId } = config;
 
-  const client = new CosmosClient({ endpoint, key });
+  const client = new CosmosClient({ endpoint: process.env.ENDPOINT, key:  process.env.KEY});
 
-  const database = client.database(databaseId);
-  const container = database.container(containerId);
+  const database = client.database(process.env.DATABASEID);
+  const container = database.container(process.env.CONTAINERID);
 
   // Make sure Tasks database is already setup. If not, create it.
-  await dbContext.create(client, databaseId, containerId);
+  await dbContext.create(client, process.env.DATABASEID, process.env.CONTAINERID);
   // </CreateClientObjectDatabaseContainer>
   
   const querySpec = {
