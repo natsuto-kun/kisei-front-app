@@ -1,5 +1,3 @@
-const config = require('./components/config')
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
