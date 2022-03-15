@@ -26,6 +26,13 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
+        env:
+          ENDPOINT: ${{ secrets.ENDPOINT }}
+          KEY: ${{ secrets.KEY }}
+          DATABASEID: ${{ secrets.DATABASEID }}
+          CONTAINERID: ${{ secrets.CONTAINERID }}
+          PARTITIONKEY_KIND: ${{ secrets.PARTITIONKEY_KIND }}
+          PARTITIONKEY_PATHS: ${{ secrets.PARTITIONKEY_PATHS }}
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
