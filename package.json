@@ -11,11 +11,16 @@
   "dependencies": {
     "@azure/cosmos": "^3.15.1",
     "@emotion/css": "^11.7.1",
+    "css-loader": "^6.7.1",
     "next": "^12.1.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
   },
   "devDependencies": {
+    "@webpack-cli/generators": "^2.4.2",
     "autoprefixer": "^10.4.2",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
