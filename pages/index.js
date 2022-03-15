@@ -3,8 +3,6 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import GetDB from '../components/app'
 import Link from 'next/link'
-import { BadEnd } from './bad'
-import { TrueEnd } from './true'
 
 export default function Home() {
   return (
