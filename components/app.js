@@ -88,5 +88,3 @@ const GetDB = async () => {
 
   return Items;
 }
-
-GetDB();
