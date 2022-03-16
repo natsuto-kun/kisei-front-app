@@ -2,6 +2,7 @@ import react from "react";
 import { css } from '@emotion/css'; 
 import styled from 'styled-components'
 import Image from 'next/image'
+import bgimage from "../public/background_true.png";
 
 const Time = styled.h1({
     position:"absolute",
@@ -26,12 +27,12 @@ const Wrapper = styled.section({
     // padding: "4em",
   });
 
-const bgimage =css`
-    position:"absolute";
-    top:0;
-    left:0;
-    zIndex:0;
-`;
+// const bgimage =styled.img`
+//     position:"absolute";
+//     top:0;
+//     left:0;
+//     zIndex:0;
+// `;
 
 const house = css`
     position:"absolute";
@@ -53,17 +54,15 @@ const TrueEnd = () => {
                 username
             </Name>
 
-            <Image className={bgimage}
-            src="/background_true.png"
-            width={1366}
-            height={768}
+            <img
+                src = {bgimage}
             />
             
-            <Image className={house}
+            {/* <Image className={house}
             src="/house_true.png"
             width={400}
             height={500}
-            />
+            /> */}
         </Wrapper>
 
     )
