@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - let-tiger-go-home
+name: Build and deploy Node.js app to Azure Web App - let-tiger-go-home-v2
 
 on:
   push:
@@ -26,13 +26,6 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-        env:
-          ENDPOINT: ${{ secrets.ENDPOINT }}
-          KEY: ${{ secrets.KEY }}
-          DATABASEID: ${{ secrets.DATABASEID }}
-          CONTAINERID: ${{ secrets.CONTAINERID }}
-          PARTITIONKEY_KIND: ${{ secrets.PARTITIONKEY_KIND }}
-          PARTITIONKEY_PATHS: ${{ secrets.PARTITIONKEY_PATHS }}
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -57,7 +50,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'let-tiger-go-home'
+          app-name: 'let-tiger-go-home-v2'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5820B90DBB004D028CD4E03F2E40C640 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B409E4253FE4407A94B77041B8FCFC9C }}
           package: .
